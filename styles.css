@@ -3,6 +3,9 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -14,10 +17,8 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2em;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 20px;
 }
 
 nav ul {
@@ -25,7 +26,6 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -41,9 +41,25 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-section {
-    margin: 20px;
-    text-align: center;
+.main-content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+}
+
+aside {
+    width: 250px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+aside h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+aside section {
+    margin-bottom: 20px;
 }
 
 .headshot {
@@ -54,8 +70,14 @@ section {
     margin: 10px auto;
 }
 
-h1, h2, h3 {
+h2, h3 {
     color: #333;
+    text-align: left;
+}
+
+#projects {
+    flex: 1;
+    text-align: center;
 }
 
 .projects-container {
@@ -123,5 +145,15 @@ footer {
 
     nav ul li {
         margin: 5px 0;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside {
+        width: 100%;
+        margin-right: 0;
     }
 }
