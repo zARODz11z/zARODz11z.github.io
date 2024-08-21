@@ -16,6 +16,10 @@ header {
     padding: 1em 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 0; /* Ensure no margin at the bottom */
 }
 
 .header-content {
@@ -28,6 +32,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -45,90 +50,65 @@ nav ul li a:hover {
     color: #ffdd57;
 }
 
-.intro-section {
-    background-color: #fff;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+.brand {
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: 15px;
 }
 
-.personal-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
+.email-text {
+    margin-left: 5px;
+    color: #fff;
+    font-size: 14px;
 }
 
-.personal-info h1 {
-    font-size: 28px;
-    margin: 0 20px 0 0;
-    color: #333;
-}
-
-.personal-info .position-title {
-    font-size: 18px;
-    margin: 5px 20px 0 0;
-    color: #555;
+/* Scroll Reminders */
+.scroll-reminder {
     display: flex;
     align-items: center;
 }
 
-.personal-info .education {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px 0;
+.scroll-arrow {
+    font-size: 24px;
+    color: #ffdd57;
+    animation: bounce 2s infinite;
+    cursor: pointer;
 }
 
-.education .degree {
-    font-size: 16px;
-    margin: 0 10px 0 0;
-    color: #777;
-    display: flex;
-    align-items: center;
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
-/* Logo Styling */
-.company-logo, .education-logo {
-    width: 24px; /* Adjust size as needed */
-    height: auto;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
+/* Projects Section */
 #projects {
     flex: 1;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
     background-color: #fafafa;
-}
-
-#projects h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+    margin-top: 0; /* Ensure no margin at the top */
 }
 
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 3-4 projects per row depending on screen size */
     gap: 20px;
+    padding: 0 20px;
 }
 
 .project {
-    flex: 1 1 30%; /* Ensures 3 projects per row */
-    max-width: 30%; /* Max width for each project */
-    box-sizing: border-box;
-    text-align: center;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -153,6 +133,7 @@ nav ul li a:hover {
     color: #555;
 }
 
+/* Project Hover Effects */
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -162,12 +143,17 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-.bottom-section {
-    text-align: center;
-    padding: 30px 0;
-    background-color: #fff;
-    border-top: 1px solid #eee;
-    margin-top: 20px;
+/* Responsive Design */
+@media (max-width: 900px) {
+    .projects-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
 }
 
 footer {
@@ -175,53 +161,5 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
     font-size: 14px;
-}
-
-/* Responsive Design */
-@media (max-width: 900px) {
-    .project {
-        flex: 1 1 45%; /* Two per row on medium screens */
-        max-width: 45%;
-    }
-}
-
-@media (max-width: 600px) {
-    .project {
-        flex: 1 1 100%; /* One per row on small screens */
-        max-width: 100%;
-    }
-}
-
-/* Scroll Arrows */
-.scroll-arrow {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 24px;
-    color: #555;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
-h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
 }
