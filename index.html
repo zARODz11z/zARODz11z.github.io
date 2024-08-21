@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Rodriguez Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="header-content">
             <nav>
                 <ul>
-                    <li class="scroll-reminder"><span class="scroll-arrow">&#x25BC;</span></li>
-                    <li class="brand"><span>Portfolio</span> | Andrew Rodriguez</li>
-                    <li><a href="https://docs.google.com/document/d/1_aZ-se73h2-lzv8guANd_iL72qRFjip6/edit?usp=sharing&ouid=113878578404311630570&rtpof=true&sd=true" target="_blank">Resume</a></li>
-                    <li><a href="mailto:andrewrod003@gmail.com">Contact</a> <span class="email-text">andrewrod003@gmail.com</span></li>
-                    <li class="scroll-reminder"><span class="scroll-arrow">&#x25BC;</span></li>
+                    <li class="scroll-reminder">
+                        <span class="scroll-arrow">&#x25BC;</span>
+                    </li>
+                    <li class="brand">Portfolio | Andrew Rodriguez | andrewrod003@gmail.com</li>
+                    <li>
+                        <a href="https://docs.google.com/document/d/1_aZ-se73h2-lzv8guANd_iL72qRFjip6/edit?usp=sharing&ouid=113878578404311630570&rtpof=true&sd=true" target="_blank" class="button-link">Resume</a>
+                    </li>
+                    <li class="scroll-reminder">
+                        <span class="scroll-arrow">&#x25BC;</span>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="projects">
-        <div class="projects-container">
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+        <div class="projects-container horizontal-projects">
             <div class="project">
-                <a href="https://github.com/zARODz11z/Patrick_Yum_Run/tree/master?tab=readme-ov-file#video-walkthrough" target="_blank">
-                    <p>Unity 3D Game: Patrick's Yum Run</p>
-                    <img src="patrick_Yum_rum_demo.gif" alt="horizontal">
-                </a>
+                <a href="https://github.com/zARODz11z/Patrick_Yum_Run/tree/master?tab=readme-ov-file#video-walkthrough" target="_blank" class="button-link">Unity 3D Game: Patrick's Yum Run</a>
+                <span class="note">* Check out the video walkthrough!</span>
+                <img src="content/patrick_Yum_rum_demo.gif" alt="Patrick's Yum Run">
                 <p class="tech-used">Technologies Used: Unity, C#, 3D Game Development, Blender 3D Modeling</p>
             </div>
             <div class="project">
-                <a href="https://github.com/zARODz11z/swallowed-holl?tab=readme-ov-file" target="_blank">
-                    <p>Unity 3D Game: Swallowed Holl</p>
-                    <img src="swallowedHollGame.gif" alt="horizontal">
-                </a>
+                <a href="https://github.com/zARODz11z/swallowed-holl?tab=readme-ov-file" target="_blank" class="button-link">Unity 3D Game: Swallowed Holl</a>
+                <span class="note">* Explore the game physics and animation!</span>
+                <img src="content/swallowedHollGame.gif" alt="Swallowed Holl">
                 <p class="tech-used">Technologies Used: Unity, C#, 3D Animation, Game Physics, Blender 3D Modeling</p>
             </div>
             <div class="project">
-                <a href="https://apps.apple.com/us/app/capital-one-mobile/id407558537" target="_blank">
-                    <p>Capital One Credit Card Delivery Tracker Intern Project</p>
-                    <img src="ccdt_tracker_progression.gif" alt="horizontal">
-                </a>
+                <a href="https://apps.apple.com/us/app/capital-one-mobile/id407558537" target="_blank" class="button-link">Capital One Credit Card Delivery Tracker Intern Project</a>
+                <span class="note">* Learn about AWS integration in this project!</span>
+                <img src="content/ccdt_tracker_progression.gif" alt="Capital One Tracker">
                 <p class="tech-used">Technologies Used: Swift, AWS Lambda, Python, JSON, iOS Development</p>
             </div>
+        </div>
+        <div class="projects-container vertical-projects">
             <div class="project">
-                <a href="https://youtu.be/6bqJtIiTgq8?si=TB084Ax6pK7Gz0JN" target="_blank">
-                    <p>TensorFlow Classifier (ML/AI Application)</p>
-                    <img src="TensorFlowFlowerClassifier.gif" alt="vertical">
-                </a>
+                <a href="https://youtu.be/6bqJtIiTgq8?si=TB084Ax6pK7Gz0JN" target="_blank" class="button-link">TensorFlow Classifier (ML/AI Application)</a>
+                <span class="note">* Check out the ML model in action!</span>
+                <img src="content/TensorFlowFlowerClassifier.gif" alt="TensorFlow Classifier">
                 <p class="tech-used">Technologies Used: TensorFlow, Python, Machine Learning, Image Classification</p>
             </div>
             <div class="project">
-                <a href="https://github.com/zARODz11z/Flixter?tab=readme-ov-file#flix" target="_blank">
-                    <p>Android Flixter Movie App</p>
-                    <img src="walkthroughVertical.gif" alt="vertical">
-                </a>
+                <a href="https://github.com/zARODz11z/Flixter?tab=readme-ov-file#flix" target="_blank" class="button-link">Android Flixter Movie App</a>
+                <span class="note">* See the full app walkthrough!</span>
+                <img src="content/walkthroughVertical.gif" alt="Flixter App">
                 <p class="tech-used">Technologies Used: Java, Android SDK, REST APIs, JSON, SQLite</p>
             </div>
             <div class="project">
-                <a href="https://github.com/zARODz11z/simpleTweet/tree/master?tab=readme-ov-file#project-2---simple-tweet-part-2" target="_blank">
-                    <p>Android Twitter Clone</p>
-                    <img src="simpleTweetWalkthroughPart2.gif" alt="vertical">
-                </a>
+                <a href="https://github.com/zARODz11z/simpleTweet/tree/master?tab=readme-ov-file#project-2---simple-tweet-part-2" target="_blank" class="button-link">Android Twitter Clone</a>
+                <span class="note">* Explore the features of this Twitter clone!</span>
+                <img src="content/simpleTweetWalkthroughPart2.gif" alt="Twitter Clone">
                 <p class="tech-used">Technologies Used: Java, Android SDK, Twitter API, JSON</p>
             </div>
         </div>
@@ -72,4 +76,5 @@
         <p>&copy; 2024 Andrew Rodriguez</p>
     </footer>
 </body>
+
 </html>
